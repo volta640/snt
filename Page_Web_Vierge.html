@@ -1,16 +1,93 @@
-
-
+<!DOCTYPE html>
+<html lang="fr">
 
 <!-- Entête de la page -->
 
 	<title> Redstone </title>
 	<head> 
 	<h1> <br> <center>Un ordinateur sur Minecraft<br>c'est possible ?</h1> 
+	<style type="text/css">
+		body {background-color: #F0F0F2;}
+		body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Style du menu */
+        .menu {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu ul li {
+            display: inline-block;
+            position: relative;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        .menu ul li:hover {
+            background-color: #555;
+        }
+
+        /* Style du sous-menu */
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #444;
+            min-width: 150px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .submenu li {
+            display: block;
+        }
+
+        .submenu li a {
+            padding: 10px;
+            display: block;
+            color: white;
+        }
+
+        .submenu li a:hover {
+            background-color: #666;
+        }
+
+        /* Afficher le sous-menu au survol */
+        .menu ul li:hover .submenu {
+            display: block;
+        }
+    </style>
 	
 	</head>
 		<body>
-			<!-- Corps de la page -->		
-			
-			<p>texte1</ p>	
-			<h2> texte2 </h2>
+
+			<nav class="menu">
+				<ul>
+					<li><a href="#">Page d'accueil</a></li>
+					<li>
+						<a href="#">Tutoriel ▾</a>
+						<ul class="submenu">
+							<li><a href="#">La redstone c'est quoi ?</a></li>
+							<li><a href="#">Les composants présents dans le jeu</a></li>
+							<li><a href="#">Portes logiques</a></li>
+						</ul>
+					</li>
+					<li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">À propos</a></li>
+				</ul>
+			</nav>
+
 		</body>
+</html>
