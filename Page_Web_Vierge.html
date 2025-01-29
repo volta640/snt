@@ -11,11 +11,15 @@
 		body {
             font-family: Arial, sans-serif;
         }
-
-        /* Style du menu */
+		
         .menu {
             background-color: #333;
             padding: 10px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
         }
 
         .menu ul {
@@ -40,16 +44,20 @@
             background-color: #555;
         }
 
-        /* Style du sous-menu */
-        .submenu {
-            display: none;
+         .submenu {
             position: absolute;
-            top: 100%;
+            bottom: 40px; /* Ajustement pour éviter qu'il sorte de l'écran */
             left: 0;
             background-color: #444;
             min-width: 150px;
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+            pointer-events: none;
         }
+
 
         .submenu li {
             display: block;
