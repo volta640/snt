@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<!-- Entête de la page -->
-
-	<title> Redstone </title>
-	<head> 
-	<h1> <br> <center>Un ordinateur sur Minecraft<br>c'est possible ?</h1> 
-	<style type="text/css">
-		body {background-color: #F0F0F2;}
-		body {
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Déroulant Fixe avec Animation</title>
+    <style>
+        body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-		
+
+        /* Menu fixé en bas */
         .menu {
             background-color: #333;
             padding: 10px;
@@ -20,17 +24,20 @@
             left: 0;
             width: 100%;
             text-align: center;
+            z-index: 1000;
         }
 
         .menu ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
+            display: flex;
+            justify-content: center;
         }
 
         .menu ul li {
-            display: inline-block;
             position: relative;
+            margin: 0 15px;
         }
 
         .menu ul li a {
@@ -44,20 +51,21 @@
             background-color: #555;
         }
 
-         .submenu {
+        /* Style du sous-menu */
+        .submenu {
             position: absolute;
-            top: -150%;
+            top: -150%; /* Afficher le sous-menu au-dessus */
             left: 0;
             background-color: #444;
             min-width: 150px;
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 
+            /* Animation en fondu */
             opacity: 0;
             transform: translateY(10px);
             transition: opacity 0.3s ease-out, transform 0.3s ease-out;
             pointer-events: none;
         }
-
 
         .submenu li {
             display: block;
@@ -73,29 +81,36 @@
             background-color: #666;
         }
 
-        /* Afficher le sous-menu au survol */
+        /* Afficher le sous-menu avec animation */
         .menu ul li:hover .submenu {
-            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
         }
+
     </style>
-	
-	</head>
-		<body>
+</head>
+<body>
 
-			<nav class="menu">
-				<ul>
-					<li><a href="#">Page d'accueil</a></li>
-					<li>
-						<a href="#">Tutoriel ▾</a>
-						<ul class="submenu">
-							<li><a href="#">La redstone c'est quoi ?</a></li>
-							<li><a href="#">Les composants présents dans le jeu</a></li>
-							<li><a href="#">Portes logiques</a></li>
-						</ul>
-					</li>
-					<li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">À propos</a></li>
-				</ul>
-			</nav>
+    <div style="flex-grow: 1;">
+        <h1>Contenu de la page</h1>
+        <p>Ajoute du texte ici pour tester l'effet du menu fixé en bas.</p>
+    </div>
 
-		</body>
+    <nav class="menu">
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li>
+                <a href="#">Tutoriel ▾</a>
+                <ul class="submenu">
+                    <li><a href="#">Les composants de base</a></li>
+                    <li><a href="#">Portes logiques</a></li>
+                    <li><a href="#">idk now</a></li>
+                </ul>
+            </li>
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">À propos</a></li>
+        </ul>
+    </nav>
+
+</body>
 </html>
