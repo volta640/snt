@@ -1,1 +1,106 @@
-<p>blank page for now</p>
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redstone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .menu {
+            background-color: #333;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .menu ul li {
+            position: relative;
+            margin: 0 15px;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        .menu ul li:hover {
+            background-color: #555;
+        }
+
+        .submenu {
+            position: absolute;
+            top: -150%;
+            left: 0;
+            background-color: #444;
+            min-width: 150px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+
+            /* Animation en fondu */
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+            pointer-events: none;
+        }
+
+        .submenu li {
+            display: block;
+        }
+
+        .submenu li a {
+            padding: 10px;
+            display: block;
+            color: white;
+        }
+
+        .submenu li a:hover {
+            background-color: #666;
+        }
+
+        .menu ul li:hover .submenu {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+    </style>
+</head>
+<body>
+<nav class="menu">
+    <ul>
+        <li><a href="../Page_html.html">Accueil</a></li>
+        <li>
+            <a href="#">Tutoriel ▾</a>
+            <ul class="submenu">
+                <li><a href="Page_html-redstone.html">Les composants de base</a></li>
+                <li><a href="Page_html-logic_doors.html">Portes logiques</a></li>
+                <li><a href="#">idk now</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Remerciements</a></li>
+        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">À propos</a></li>
+    </ul>
+</nav>
+</body>
