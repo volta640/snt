@@ -56,6 +56,37 @@
                 transform: translateY(0);
             }
         }
+	    
+	    .full-width-box {
+   		display: flex;
+ 		align-items: center;
+  		justify-content: space-between;
+		width: 100%;
+  		background-color: #f4f4f4;
+    		padding: 20px;
+    		margin-top: 20px;
+	}
+
+	    .text-left {
+    		width: 50%;
+    		padding-left: 5%;
+    		font-size: 18px;
+    		line-height: 1.6;
+	}
+
+	    .image-right {
+    		width: 50%;
+   		display: flex;
+    		justify-content: center;
+    		padding-right: 5%;
+	}
+
+	   .image-right img {
+    		max-width: 90%;
+		height: auto;
+    		border-radius: 10px;
+	}
+
 
         .menu {
             background-color: #333;
@@ -140,6 +171,19 @@
         Allons-y pas à pas et vous verrez : c'est plus simple que ce que vous croyez !
     </p>
     </div>
+
+    <div class="full-width-box">
+    <div class="text-left">
+        <h2>La redstone et le binaire...</h2>
+        <p>Dans un ordinateur réel, on constate que il fonctionne non pas en comprenant des lignes de code, mais grâce à des milliards de 0 et de 1 que lui peut facilement comprendre. Chaque musique, 
+	   chaque touche pressée sur un clavier, et même l'écran avec lequel tu vois ceci, ce n'est q'une histoire de 0 et de 1: l'absence ou la présence... Et la redstone peut être allumée ou éteinte... 
+	Éteint : 0 ; Allumé : 1. La voilà la solution !</p>
+    </div>
+    <div class="image-right">
+        <img src="img/redstone_wires.jpg" alt="2 fils de redstone, l'un allumé avec 1 en dessous, et l'autre éteint avec 0 en dessous.">
+    </div>
+    </div>
+
 
     <nav class="menu">
         <ul>
