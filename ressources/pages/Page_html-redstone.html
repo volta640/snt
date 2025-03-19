@@ -12,8 +12,45 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-start;
         }
+		
+		.title {
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+		
+		.full-width-box {
+   		display: flex;
+ 		align-items: center;
+  		justify-content: space-between;
+		width: 100%;
+  		background-color: #f4f4f4;
+    		padding: 20px;
+    		margin-top: 20px;
+	}
+
+	    .text-left {
+    		width: 50%;
+    		padding-left: 5%;
+    		font-size: 18px;
+    		line-height: 1.6;
+	}
+
+	    .image-right {
+    		width: 50%;
+   		display: flex;
+    		justify-content: center;
+    		padding-right: 5%;
+	}
+
+	   .image-right img {
+    		max-width: 90%;
+		height: auto;
+    		border-radius: 10px;
+	}
 
         .menu {
             background-color: #333;
@@ -88,6 +125,92 @@
     </style>
 </head>
 <body>
+
+<div style="flex-grow: 1;">
+        <h1 class="title">Les composants de base en redstone</h1>
+        </div>
+
+<div class="full-width-box">
+    <div class="text-left">
+        <h2>Le fil de redstone</h2>
+        <p>Le fil de redstone, c'est un peu comme les fils électriques de l'ordinateur : ils conduisent l'électricité, ou dans le cas du jeu
+		un signal. Le signal cependant se dégrade en général au bout de 15 blocs dans le jeu, c'est pourquoi nous devons placer un répéteur 
+		de redstone tous les 15 blocs. L'image ci-contre montre 2 fils redstone, celui de gauche ne transporte pas de signal : il vaut 0, contrairement à celui de 
+		droite en transporte un : il vaut 1.</p>
+    </div>
+    <div class="image-right">
+        <img src="../img/redstone_wires.jpg" alt="2 fils de redstone, l'un allumé avec 1 en dessous, et l'autre éteint avec 0 en dessous.">
+    </div>
+    </div>
+	
+	<div class="full-width-box">
+    <div class="text-left">
+        <h2>Le répéteur de redstone</h2>
+        <p>Le répéteur de redstone, lorsqu'il reçoit un signal en entrée, renvoie un signal de puissance maximale en sortie. Si il reçoit un signal d'un autre répéteur sur le côté, 
+		celà bloque l'état du répéteur tant qu'il reçoit ce signal : il reste allumé si il l'était et inversement. Il est également important de noter qu'il crée un délai pouvant aller
+		de 0.1 seconde jusqu'à 0.4 secondes, en foction de son réglage.</p>
+    </div>
+    <div class="image-right">
+        <img src="../img/redstone_repeaters.png" alt="2 répéteurs de redstone, l'un alimenté et l'autre non.">
+    </div>
+    </div>
+	
+	<div class="full-width-box">
+    <div class="text-left">
+        <h2>La torche de redstone</h2>
+        <p>La torche de redstone permet d'inverser un signal si l'on envoie un courant dans le bloc sur le bloc où cette dernière repose. 
+		Un signal éteint en entrée renverra un signal allumé et inversement donc. À noter que dans les nouvelles versions, les torches de redstone 
+		ont changé leur visuel, devenant celui de droite.</p>
+    </div>
+    <div class="image-right">
+        <img src="../img/redstone_torches.png" alt="Les torches de redstone, ancien et nouveau deseign.">
+    </div>
+    </div>
+	
+	<div class="full-width-box">
+    <div class="text-left">
+        <h2>Le bloc de redstone</h2>
+        <p>Le bloc de redstone génère un signal de puissance maximale, soit 15. </p>
+    </div>
+    <div class="image-right">
+        <img src="../img/redstone_block.png" alt="Un bloc de redstone.">
+    </div>
+    </div>
+	
+	<div class="full-width-box">
+    <div class="text-left">
+        <h2>La... cible ?</h2>
+        <p>Oui, la cible nous sera utile. Elle permet de rediriger les fils de redstone là où ces derniers ne pourrait aller.</p>
+    </div>
+    <div class="image-right">
+        <img src="../img/target_block.png" alt="Une cible Minecraft.">
+    </div>
+    </div>
+	
+	<div class="full-width-box">
+    <div class="text-left">
+        <h2>La redstone et le binaire...</h2>
+        <p>Dans un ordinateur réel, on constate que il fonctionne pas seulement en comprenant des lignes de code, mais à la base grâce à des milliards de 0 et de 1 que lui peut facilement comprendre. Chaque musique, 
+	   chaque touche pressée sur un clavier, et même l'écran avec lequel tu vois ceci, ce n'est q'une histoire de 0 et de 1: l'absence ou la présence de courant... Et la redstone peut être allumée ou éteinte... 
+	Éteint : 0 ; Allumé : 1. Voilà la solution !</p>
+    </div>
+    <div class="image-right">
+        <img src="../img/redstone_wires.jpg" alt="2 fils de redstone, l'un allumé avec 1 en dessous, et l'autre éteint avec 0 en dessous.">
+    </div>
+    </div>
+	
+	<div class="full-width-box">
+    <div class="text-left">
+        <h2>La redstone et le binaire...</h2>
+        <p>Dans un ordinateur réel, on constate que il fonctionne pas seulement en comprenant des lignes de code, mais à la base grâce à des milliards de 0 et de 1 que lui peut facilement comprendre. Chaque musique, 
+	   chaque touche pressée sur un clavier, et même l'écran avec lequel tu vois ceci, ce n'est q'une histoire de 0 et de 1: l'absence ou la présence de courant... Et la redstone peut être allumée ou éteinte... 
+	Éteint : 0 ; Allumé : 1. Voilà la solution !</p>
+    </div>
+    <div class="image-right">
+        <img src="../img/redstone_wires.jpg" alt="2 fils de redstone, l'un allumé avec 1 en dessous, et l'autre éteint avec 0 en dessous.">
+    </div>
+    </div>
+	
 <nav class="menu">
     <ul>
         <li><a href="../Page_html.html">Accueil</a></li>
@@ -96,7 +219,7 @@
             <ul class="submenu">
                 <li><a href="Page_html-redstone.html">Les composants de base</a></li>
                 <li><a href="Page_html-logic_doors.html">Portes logiques</a></li>
-                <li><a href="#">Les composants de l'ordinateur</a></li>
+                <li><a href="Page_html-components.html">Les composants</a></li>
             </ul>
         </li>
         <li><a href="Page_html-thanks.html">Remerciements</a></li>
