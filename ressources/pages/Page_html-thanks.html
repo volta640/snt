@@ -15,6 +15,35 @@
             justify-content: space-between;
         }
 
+        .text-container {
+            max-width: 800px;
+            margin: 10px auto 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            font-size: 18px;
+            line-height: 1.6;
+	        display: flex;
+    	    align-items: center;
+ 	        justify-content: center;
+    	    text-align: center; 
+	        min-height: 150px;
+            opacity: 0; 
+            animation: fadeIn 1s ease-out forwards; 
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px); 
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
         .menu {
             background-color: #333;
             padding: 10px;
@@ -88,6 +117,21 @@
     </style>
 </head>
 <body>
+    <h1><center>Remerciements</center></h1>
+
+    <div class="text-container">
+    <p>
+        Premièrement, j'aimerai remercier mattbatwings, youubeur anglophone, car il a été cité plusieurs fois dans ce site. En effet, il suffit de voir que la partie sur les composants
+        de l'ordinateur contiennent des vidéos de lui. Si vous souhaitez en connaître d'avantage sur lui ou ce qu'il fait, allez voir sa chaîne Youtube.
+    </p>
+    </div>
+
+    <div class="text-container">
+    <p>
+        Et enfin, j'aimerai remercier V2F, youtubeur francphone, qui grâce à sa vidéo youtube intitulée "vas-y viens, on recrée un orfi sur minecraft", m'a permis de comprendre comment un ordinateur minecraft fonctionne.
+    </p>
+    </div>
+    
 <nav class="menu">
     <ul>
         <li><a href="../Page_html.html">Accueil</a></li>
