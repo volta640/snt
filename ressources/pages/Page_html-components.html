@@ -12,7 +12,73 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-start;
+        }
+
+.title {
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+
+
+.text-container2 {
+            max-width: 800px;
+            margin: 10px auto 50px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            font-size: 18px;
+            line-height: 1.6;
+	        display: flex;
+    	    align-items: center;
+ 	        justify-content: center;
+    	    text-align: center; 
+	        min-height: 150px;
+            opacity: 0; 
+            animation: fadeIn 1s ease-out forwards; 
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px); 
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .text-container {
+            width: 100%;
+            background-color: #f4f4f4;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            box-sizing: border-box;
+        }
+
+        .text-container p {
+            margin: 0;
+            font-size: 18px;
+            padding-left: 20px;
+            flex: 1; 
+        }
+
+        .video-container {
+            flex: 0 0 560px; 
+            padding-right: 20px;
+        }
+
+        .video-container iframe {
+            width: 560px;
+            height: 315px;
+            border-radius: 10px;
+            border: 2px solid white;
         }
 
         .menu {
@@ -57,8 +123,6 @@
             background-color: #444;
             min-width: 150px;
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-
-            /* Animation en fondu */
             opacity: 0;
             transform: translateY(10px);
             transition: opacity 0.3s ease-out, transform 0.3s ease-out;
@@ -85,22 +149,62 @@
             pointer-events: auto;
         }
 
+        .video-overlay {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 300px;
+            z-index: 1000;
+            border: 3px solid white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+        }
     </style>
 </head>
 <body>
-<nav class="menu">
-    <ul>
-        <li><a href="../Page_html.html">Accueil</a></li>
-        <li>
-            <a href="#">Tutoriel ▾</a>
-            <ul class="submenu">
-                <li><a href="Page_html-redstone.html">Les composants de base</a></li>
-                <li><a href="Page_html-logic_doors.html">Portes logiques</a></li>
-                <li><a href="Page_html-components.html">Les composants</a></li>
-            </ul>
-        </li>
-        <li><a href="Page_html-thanks.html">Remerciements</a></li>
-        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">À propos</a></li>
-    </ul>
-</nav>
+
+<h1 class="title">Les composants de l'ordinateur</h1>
+
+<div class="text-container2">
+    <p>
+        On y est : on va enfin le construire cet ordinateur ! Concentrons nous déjà sur un ordinateur permettant de faire des calculs, la base de la base d'un ordinateur. Si vous souhaitez continuer davantage, je vous invie à regarder la suite de la playlist de vidéos "Let's make a redstone computer !" de mattbatwings. J'ai utilisé 2 de ses vidéos ici, venant aussi de cette playlist de vidéos.
+    </p>
+    </div>
+
+    <div class="text-container">
+        <p>Voici une boîte de texte pleine largeur avec un texte à gauche et une vidéo à droite.</p>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/ChR7wS94WoY" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+<p><br><br></p>
+
+<div class="text-container">
+        <p>Voici une boîte de texte pleine largeur avec un texte à gauche et une vidéo à droite.</p>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/LUQZR8i_t-0" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+<p><br><br>.</p>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="../Page_html.html">Accueil</a></li>
+            <li>
+                <a href="#">Tutoriel ▾</a>
+                <ul class="submenu">
+                    <li><a href="Page_html-redstone.html">Les composants de base</a></li>
+                    <li><a href="Page_html-logic_doors.html">Portes logiques</a></li>
+                    <li><a href="Page_html-components.html">Les composants</a></li>
+                </ul>
+            </li>
+            <li><a href="Page_html-thanks.html">Remerciements</a></li>
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">À propos</a></li>
+        </ul>
+<span class="copyright">© 2025 VoltaIndustries</span>
+    </nav>
+
 </body>
+</html>
